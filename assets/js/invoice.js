@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }) : [];
 
-    document.getElementById('customer-name').textContent = customerName;
-    document.getElementById('customer-phone').textContent = customerPhone;
+    document.getElementById('customer-name').textContent = `Name: ${customerName}`;
+    document.getElementById('customer-phone').textContent = `Phone: ${customerPhone}`;
     document.getElementById('enquiry-id').textContent = Math.floor(100000 + Math.random() * 900000);
     document.getElementById('enquiry-date').textContent = new Date().toLocaleDateString('en-GB');
 

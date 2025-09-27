@@ -291,7 +291,7 @@ document.getElementById("submit-button").onclick = () => {
   const currentFile = window.location.pathname.split("/").pop();
   const fileNameWithoutExt = currentFile.split(".")[0];
 
-  const enquiryFile = `invoice.html`;
+  const enquiryFile = `demo-book-center/invoice.html`;
   const basePath = window.location.href.replace(currentFile, "");
 
   const enquiryUrl = `/${enquiryFile}?n=${name}&p=${phone}&c=${cartData}`;
