@@ -131,7 +131,7 @@ body {
   width: 40px;
   height: 8px;
   border-radius: 4px;
-  background: #E8B838;
+  background: #e8b838;
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
@@ -203,16 +203,16 @@ body {
   margin-bottom: 16px;
 }
 
-#controls-accordion input,
+/* #controls-accordion input,
 #controls-accordion select,
 #controls-desktop input,
 #controls-desktop select {
   width: 100%;
-  padding: 10px 8px;
+  padding: 12px 8px;
   border: 1px solid #d1d5db;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
-}
+} */
 
 /* #controls {
   display: grid;
@@ -290,42 +290,6 @@ th {
   position: relative;
 }
 
-.modal-header {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-bottom: 2px solid var(--primary-color);
-  text-align: center;
-}
-
-.close {
-  color: var(--primary-color);
-  font-size: 2.5rem;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-}
-
-#modal-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.modal-text {
-  padding: 20px;
-}
-
-.modal-text input {
-  width: 100%;
-  padding: 0.85rem;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
 
 #phone-error {
   color: var(--modal-close);
@@ -338,7 +302,7 @@ th {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 2rem;
-  border-top: 1px solid var(--border-medium);
+  /* border-top: 1px solid var(--border-medium); */
 }
 
 .modal-buttons button {
@@ -361,25 +325,6 @@ th {
   color: var(--white);
 }
 
-.amount-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  font-size: 20px;
-  font-weight: 600;
-}
-.amount-summary #saved-amount {
-  color: #4c7d44;
-  font-size: 20px;
-}
-.amount-summary #total-amount-modal {
-  color: #4f2e2e;
-  font-size: 20px;
-}
 
 /* Floating Total & Icons */
 #floating-total {
@@ -1110,4 +1055,12 @@ td[data-label="authorname"] {
   border: 1px solid var(--border-light);
   border-radius: 4px;
   font-size: 1em;
+}
+
+.gradient-icon i {
+  background: linear-gradient(90deg, #111825, #e8b737);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

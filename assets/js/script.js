@@ -1,3 +1,24 @@
+// offcanvas
+const openBtn = document.getElementById("openCanvas");
+const closeBtn = document.getElementById("closeCanvas");
+const offCanvas = document.getElementById("offCanvas");
+const overlay = document.getElementById("overlay");
+
+openBtn.addEventListener("click", () => {
+  offCanvas.classList.remove("translate-x-full");
+  overlay.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  offCanvas.classList.add("translate-x-full");
+  overlay.classList.add("hidden");
+});
+
+overlay.addEventListener("click", () => {
+  offCanvas.classList.add("translate-x-full");
+  overlay.classList.add("hidden");
+});
+
 // ====================== STORAGE =========================
 function saveCartToStorage() {
   const cartData = products.map((p) => ({
