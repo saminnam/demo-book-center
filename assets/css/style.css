@@ -658,9 +658,9 @@ td[data-label="authorname"] {
     font-size: 20px;
   }
   #ok-button {
-    font-size: 19px;
-    padding: 15px;
-    width: 80px;
+    font-size: 18px;
+    padding: 10px;
+    width: 70px;
   }
   #floating-icons {
     bottom: 150px;
@@ -671,9 +671,9 @@ td[data-label="authorname"] {
     right: 10px;
   }
   #clear-button {
-    font-size: 19px;
-    padding: 15px;
-    width: 80px;
+    font-size: 18px;
+    padding: 10px;
+    width: 70px;
   }
 }
 
@@ -767,7 +767,7 @@ td[data-label="authorname"] {
   }
 
   .total-display {
-    font-size: 18px;
+    font-size: 16px;
   }
   .bottom-bar-buttons {
     display: grid;
@@ -1046,6 +1046,19 @@ td[data-label="authorname"] {
     gap: 5px;
     transition: 0.2s;
     overflow: hidden;
+  }
+  .product-info h2 {
+    font-size: 13px;
+  }
+  .product-author {
+    font-size: 11px;
+    color: #666;
+    font-weight: 600;
+  }
+  .product-total {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
   }
 }
 
