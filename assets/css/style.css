@@ -31,7 +31,7 @@
   --tel-bg: #64b5f6;
 
   /* Borders & Shadows */
-  --border-light: #ffe0b2;
+  --border-light: f1eee9;
   --border-medium: #ffcdd2;
   --shadow-light: rgba(245, 95, 10, 0.25);
   --shadow-medium: rgba(0, 0, 0, 0.25);
@@ -290,7 +290,6 @@ th {
   position: relative;
 }
 
-
 #phone-error {
   color: var(--modal-close);
   font-size: 0.9em;
@@ -324,7 +323,6 @@ th {
   background-color: var(--button-red);
   color: var(--white);
 }
-
 
 /* Floating Total & Icons */
 #floating-total {
@@ -650,10 +648,10 @@ td[data-label="authorname"] {
   .quantity-controls {
     justify-content: end;
   }
-  .quantity-input {
+  /* .quantity-input {
     width: 30px;
     height: 25px;
-  }
+  } */
   #floating-total {
     bottom: 10px;
     right: 10px;
@@ -942,6 +940,7 @@ td[data-label="authorname"] {
   align-items: center;
   gap: 10px;
   transition: 0.2s;
+  overflow: hidden;
 }
 
 .product-card .product-info {
@@ -956,6 +955,9 @@ td[data-label="authorname"] {
 .product-card.highlight-row {
   border-color: #f97316;
   background-color: #fff7ed;
+}
+.product-image {
+  overflow: hidden;
 }
 
 .product-image img {
@@ -995,7 +997,7 @@ td[data-label="authorname"] {
 
 .product-quantity {
   display: flex;
-  gap: 5px;
+  /* gap: 5px; */
   align-items: center;
 }
 
@@ -1011,6 +1013,40 @@ td[data-label="authorname"] {
   font-size: 1rem;
   background-color: green;
   color: #fff;
+}
+
+@media (orientation: portrait) {
+  .product-quantity .add {
+    padding: 5px 6px;
+    font-size: 12px;
+    background-color: green;
+    color: #fff;
+  }
+  .product-quantity .less {
+    padding: 5px 6px;
+    font-size: 12px;
+    background-color: red;
+    color: #fff;
+  }
+  .quantity-input {
+    width: 40px !important;
+    height: 28px !important;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    /* border-radius: 4px; */
+    font-size: 14px;
+  }
+  .product-card {
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+    overflow: hidden;
+  }
 }
 
 .product-total {
@@ -1050,10 +1086,10 @@ td[data-label="authorname"] {
 
 .quantity-input {
   width: 50px;
-  height: 40px;
+  height: 34px;
   text-align: center;
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
+  border: 1px solid #f1eee9;
+  /* border-radius: 4px; */
   font-size: 1em;
 }
 
