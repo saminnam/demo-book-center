@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+
 // offcanvas
 const openBtn = document.getElementById("openCanvas");
 const closeBtn = document.getElementById("closeCanvas");

@@ -41,6 +41,18 @@
 
 
 <body>
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 flex flex-col gap-4 items-center justify-center bg-white z-50">
+    <div class="book">
+      <div class="book__pg-shadow"></div>
+      <div class="book__pg"></div>
+      <div class="book__pg book__pg--2"></div>
+      <div class="book__pg book__pg--3"></div>
+      <div class="book__pg book__pg--4"></div>
+      <div class="book__pg book__pg--5"></div>
+    </div>
+    <h4 class="md:text-lg font-bold text-[#E4AE33] uppercase">Baqavi Book Centre</h4>
+  </div>
 
   <!-- offcanvas section starts -->
   <!-- Overlay -->
@@ -135,7 +147,7 @@
     directly from publishers. 🌙
   </marquee>
   <header class="md:sticky top-0 z-40">
-    <div class="main-header-content px-5 py-2">
+    <div class="main-header-content px-4 md:px-10 py-2">
       <div class="logo-container w-[100px] md:w-[120px]">
         <img src="./assets/img/logo-bg.png" alt="baqavibookcenter-logo" class="object-cover" />
       </div>
@@ -152,37 +164,37 @@
   <main>
     <!-- banner section starts -->
     <section>
-      <div class="slider">
+      <div class="slider h-[50vh] md:h-[80vh]">
         <div class="slides" id="slides">
           <div class="slide">
             <a>
               <img src="https://dummyimage.com/1198x591/7a757a/fff" alt="Slide 1"
-                class="md:block hidden w-full h-full object-cover" />
-              <img src="https://dummyimage.com/500x800/7a757a/fff" alt="Slide 1"
+                class="md:block hidden w-full md:h-full object-cover" />
+              <img src="https://dummyimage.com/500/7a757a/fff" alt="Slide 1"
                 class="block md:hidden w-full h-full object-cover" />
             </a>
           </div>
           <div class="slide">
             <a>
               <img src="https://dummyimage.com/1198x591/7a757a/fff" alt="Slide 2"
-                class="md:block hidden w-full h-full object-cover" />
-              <img src="https://dummyimage.com/500x800/7a757a/fff" alt="Slide 2"
+                class="md:block hidden w-full md:h-full object-cover" />
+              <img src="https://dummyimage.com/500/7a757a/fff" alt="Slide 2"
                 class="block md:hidden w-full h-full object-cover" />
             </a>
           </div>
           <div class="slide">
             <a>
               <img src="https://dummyimage.com/1198x591/7a757a/fff" alt="Slide 3"
-                class="md:block hidden w-full h-full object-cover" />
-              <img src="https://dummyimage.com/500x800/7a757a/fff" alt="Slide 3"
+                class="md:block hidden w-full md:h-full object-cover" />
+              <img src="https://dummyimage.com/500/7a757a/fff" alt="Slide 3"
                 class="block md:hidden w-full h-full object-cover" />
             </a>
           </div>
           <div class="slide">
             <a>
               <img src="https://dummyimage.com/1198x591/7a757a/fff" alt="Slide 4"
-                class="md:block hidden w-full h-full object-cover" />
-              <img src="https://dummyimage.com/500x800/7a757a/fff" alt="Slide 4"
+                class="md:block hidden w-full md:h-full object-cover" />
+              <img src="https://dummyimage.com/500/7a757a/fff" alt="Slide 4"
                 class="block md:hidden w-full h-full object-cover" />
             </a>
           </div>
@@ -205,7 +217,7 @@
     </section>
     <!-- banner section ends -->
     <!-- filter section starts -->
-    <section class="px-4 py-5 md:py-10 mt-5 sticky top-0 md:top-28 bg-white z-20">
+    <section class="px-4 md:px-10 py-5 md:py-10 mt-5 sticky top-0 md:top-28 bg-white z-20">
       <div class="container mx-auto">
         <div id="controls-desktop" class="desktop-controls">
           <div id="controls" class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-5 gap-2">
@@ -239,7 +251,7 @@
       </div>
     </section>
     <!-- filter section ends -->
-    <section class="px-4 mt-10 mb-16">
+    <section class="px-4 md:px-10 mt-10 mb-16">
       <div class="container mx-auto">
         <div id="products-container"
           class="products-grid grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 xl:grid-cols-5 gap-2 md:gap-y-0 gap-y-8 md:gap-8 lg:gap-10">
@@ -248,15 +260,6 @@
       </div>
     </section>
   </main>
-  <!-- <div id="image-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="modal-header">
-        <h2 id="modal-header-text">Product Name</h2>
-      </div>
-      <img id="modal-image" src="" alt="Product Image" />
-    </div>
-  </div> -->
   <div id="form-modal" class="modal form-modal-container">
     <div class="modal-content">
       <div id="loader-overlay">
@@ -298,22 +301,17 @@
     </div>
   </div>
 
-  <div id="bottom-bar">
+  <div id="bottom-bar" class="z-40">
     <div class="bottom-bar-buttons">
       <button id="clear-button">Clear</button>
     </div>
     <div class="total-display">
-      Total: ₹<span id="total-amount"> 0.00</span>
+      Total: ₹ <span id="total-amount"> 0.00</span>
     </div>
     <div class="bottom-bar-buttons">
       <button id="ok-button" class="bg-[#111825] text-white px-2">OK</button>
     </div>
   </div>
-  <!-- <div id="floating-total">
-      <span class="total-float">Total: ₹</span
-      ><span id="total-amount" class="total-float">0.00</span>
-      <button id="ok-button">Enquiry</button>
-    </div> -->
   <footer
     class="pt-16 bg-[url('./assets/img/bg-pattern/footer-pattern.webp')] bg-cover bg-center bg-no-repeat text-white relative">
     <div class="">
@@ -327,7 +325,7 @@
             <p>Shop the best <strong>Islamic books online</strong>, including <strong>Quran, Hadith, Islamic
                 history</strong>, and educational <strong>Islamic literature</strong>. Fast delivery across India.</p>
             <div class="flex md:flex-row flex-col gap-3 justify-center items-center">
-              <a href="tel:+91 74488 88336"> <i class="fa-solid fa-phone-volume"></i> +91 74488 88336 </a><span
+              <a href="tel:+91 74488 88336"> <i class="fa-solid fa-phone"></i> +91 74488 88336 </a><span
                 class="md:block hidden"> | </span><a href="maito:baqavibookcentre@gmail.com"><i
                   class="fa-solid fa-envelope"></i> baqavibookcentre@gmail.com</a>
             </div>
@@ -337,22 +335,24 @@
           <div>
             <ul class="flex gap-4 items-center justify-center py-5 md:text-xl text-lg">
               <li>
-                <a class="hover-target" href="https://www.facebook.com/share/1CBcqbsNFV/" target="_blank">
+                <a href="https://www.facebook.com/share/1CBcqbsNFV/" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a class="hover-target" href="https://whatsapp.com/channel/0029VbAm1L15EjxsYm8ndw0b" target="_blank">
-                  <img src="https://cdn-icons-png.freepik.com/256/18912/18912824.png?semt=ais_white_label" alt="" width="25" class="filter invert brightness-0">
+                <a href="https://whatsapp.com/channel/0029VbAm1L15EjxsYm8ndw0b" target="_blank">
+                  <img src="https://cdn-icons-png.freepik.com/256/18912/18912824.png?semt=ais_white_label" alt=""
+                    width="25" class="filter invert brightness-0">
                 </a>
               </li>
               <li>
-                <a class="hover-target" href="https://wa.me/+917448888336" target="_blank">
+                <a href="https://wa.me/+917448888336" target="_blank">
                   <i class="fab fa-whatsapp"></i>
                 </a>
               </li>
               <li>
-                <a class="hover-target" href="https://youtube.com/@baqavibookcentre?si=9MR_k8Mlc_hVC3MSMS" target="_blank">
+                <a href="https://youtube.com/@baqavibookcentre?si=9MR_k8Mlc_hVC3MSMS"
+                  target="_blank">
                   <i class="fab fa-youtube"></i>
                 </a>
               </li>
