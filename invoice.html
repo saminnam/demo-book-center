@@ -1,190 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enquiry Details</title>
-    <link rel="stylesheet" href="./assets/css/invoice.css" />
-  </head>
 
-  <body>
-    <div class="invoice-container">
-      <header class="invoice-header">
-        <div class="logo-container">
-          <img
-            src="assets/img/logo-bg.png"
-            alt="baqavibookcentre-logo"
-          />
-          <!-- <div class="company-name">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiry Details</title>
+  <link rel="stylesheet" href="./assets/css/invoice.css" />
+</head>
+
+<body>
+  <div class="invoice-container">
+    <header class="invoice-header">
+      <div class="logo-container">
+        <img src="assets/img/logo-bg.png" alt="baqavibookcentre-logo" />
+        <!-- <div class="company-name">
             <h1>NOXLAY</h1>
             <p>Crackers</p>
           </div> -->
-        </div>
-        <div class="header-details">
-          Phone: +91 74488 88336 <br />
+      </div>
+      <div class="header-details">
+        Phone: +91 74488 88336 <br />
         Location: Mannadi
-        </div>
-      </header>
+      </div>
+    </header>
 
-      <section class="invoice-details">
-        <div class="detail-box">
-          <h3>ENQUIRY TO</h3>
-          <p id="customer-name"></p>
-          <p id="customer-phone"></p>
-        </div>
-        <div class="detail-box text-right">
-          <h3 style="display: none">ENQUIRY ID:</h3>
-          <p id="enquiry-id" style="display: none"></p>
-          <h3>DATE :</h3>
-          <p id="enquiry-date"></p>
-        </div>
-      </section>
+    <section class="invoice-details">
+      <div class="detail-box">
+        <h3>ENQUIRY TO</h3>
+        <p id="customer-name"></p>
+        <p id="customer-phone"></p>
+      </div>
+      <div class="detail-box text-right">
+        <h3 style="display: none">ENQUIRY ID:</h3>
+        <p id="enquiry-id" style="display: none"></p>
+        <h3>DATE :</h3>
+        <p id="enquiry-date"></p>
+      </div>
+    </section>
 
-      <section class="invoice-table-container">
-        <table class="items-table">
-          <thead>
-            <tr>
-              <th style="width: 5%">S.NO</th>
-              <th style="width: 30%">ITEM NAME</th>
-              <th class="align-right" style="width: 10%">QTY</th>
-              <th class="align-right" style="width: 20%">MRP</th>
-              <th class="align-right" style="width: 20%">PRICE</th>
-              <th class="align-right" style="width: 20%">AMOUNT</th>
-            </tr>
-          </thead>
-          <tbody id="invoice-items"></tbody>
-        </table>
-      </section>
+    <section class="invoice-table-container">
+      <table class="items-table">
+        <thead>
+          <tr>
+            <th style="width: 5%">S.NO</th>
+            <th style="width: 30%">ITEM NAME</th>
+            <th class="align-right" style="width: 10%">QTY</th>
+            <th class="align-right" style="width: 20%">MRP</th>
+            <th class="align-right" style="width: 20%">PRICE</th>
+            <th class="align-right" style="width: 20%">AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody id="invoice-items"></tbody>
+      </table>
+    </section>
 
-      <section class="invoice-totals">
-        <table class="totals-table">
-          <tbody>
-            <tr>
-              <td class="label">Total Quantity</td>
-              <td class="value" id="total-qty"></td>
-            </tr>
-            <tr class="saved">
-              <td class="label">You Saved</td>
-              <td class="value" id="saved-amount"></td>
-            </tr>
-            <tr class="grand-total">
-              <td class="label">TOTAL AMOUNT</td>
-              <td class="value" id="total-amount"></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+    <section class="invoice-totals">
+      <table class="totals-table">
+        <tbody>
+          <tr>
+            <td class="label">Total Quantity</td>
+            <td class="value" id="total-qty"></td>
+          </tr>
+          <tr class="saved">
+            <td class="label">You Saved</td>
+            <td class="value" id="saved-amount"></td>
+          </tr>
+          <tr class="grand-total">
+            <td class="label">TOTAL AMOUNT</td>
+            <td class="value" id="total-amount"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-      <section class="invoice-actions">
-        <button class="print-button" onclick="window.print()">
-          Print Enquiry
-        </button>
-      </section>
-    </div>
-    <script>
-      const products = [
-        {
-          code_no: "1",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "இறைத்தூதர் முஹம்மத்",
-          writer: "M.R.M. அப்துர்ரஹீம்",
-          category: "சீரா",
-          original_price: 700,
-          offer_price: 600,
-          content: "",
-        },
-        {
-          code_no: "2",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "நூரானி காயிதா",
-          writer: "ஷம்சுத்தீன் காஷிஃபீ",
-          category: "பாடநூல்",
-          original_price: 100,
-          offer_price: 30,
-          content: "",
-        },
-        {
-          code_no: "3",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "பெண் ஸஹாபாக்கள் வரலாறு",
-          writer: "முஹம்மத் யூசுஃப் சாஹிப்",
-          category: "பெண்கள் நூல்கள்",
-          original_price: 150,
-          offer_price: 145,
-          content: "",
-        },
-        {
-          code_no: "4",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "100 பேர்",
-          writer: "மைக்கல் ஹெச். ஹார்ட்",
-          category: "கட்டுரைகள்",
-          original_price: 100,
-          offer_price: 500,
-          content: "",
-        },
-        {
-          code_no: "5",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "மஹ்ஜபீன்",
-          writer: "ஹஸன்",
-          category: "நாவல்",
-          original_price: 280,
-          offer_price: 180,
-          content: "",
-        },
-        {
-          code_no: "6",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "அபூபக்ர் ரலியல்லஹு அன்ஹு ஓர் இனிய வரலாறு",
-          writer: "இமாம் ஸுயூதி (ரஹ்)",
-          category: "வரலாறு",
-          original_price: 100,
-          offer_price: 40,
-          content: "",
-        },
-        {
-          code_no: "7",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "40 ஸலவாத்துகளும் சிறப்புகளும்",
-          writer: "",
-          category: "",
-          original_price: 200,
-          offer_price: 100,
-          content: "",
-        },
-        {
-          code_no: "8",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "மன்ஜில் (அற்புத நோய் நிவாரணி)",
-          writer: "",
-          category: "அவ்ராது",
-          original_price: 50,
-          offer_price: 20,
-          content: "",
-        },
-        {
-          code_no: "9",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "கஸஸுன் நபிய்யீன்",
-          writer: "அபுல் ஹஸன் நத்வீ (ரஹ்)",
-          category: "பாடநூல் (அரபி)",
-          original_price: 100,
-          offer_price: 45,
-          content: "",
-        },
-        {
-          code_no: "10",
-          img: "https://i.pinimg.com/1200x/a6/7d/a1/a67da1414caeee389c25a03f6583ce0d.jpg",
-          name: "தேன்துளிகள்",
-          writer: "அஃப்ஸல் ஹுஸைன்",
-          category: "சிறுவர் நூல்கள்",
-          original_price: 100,
-          offer_price: 90,
-          content: "",
-        },
-      ];
-    </script>
-    <script src="./assets/js/invoice.js"></script>
-  </body>
+    <section class="invoice-actions">
+      <button class="print-button" onclick="window.print()">
+        Print Enquiry
+      </button>
+    </section>
+  </div>
+  <script>
+    const products = [
+      {
+        code_no: "1",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "இறைத்தூதர் முஹம்மத்",
+        writer: "M.R.M. அப்துர்ரஹீம்",
+        category: "சீரா",
+        original_price: 600,
+        offer_price: 540,
+        content: "",
+      },
+      {
+        code_no: "2",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "நூரானி காயிதா",
+        writer: "ஷம்சுத்தீன் காஷிஃபீ",
+        category: "பாடநூல்",
+        original_price: 30,
+        offer_price: 27,
+        content: "",
+      },
+      {
+        code_no: "3",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "பெண் ஸஹாபாக்கள் வரலாறு",
+        writer: "முஹம்மத் யூசுஃப் சாஹிப்",
+        category: "பெண்கள் நூல்கள்",
+        original_price: 145,
+        offer_price: 130,
+        content: "",
+      },
+      {
+        code_no: "4",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "100 பேர்",
+        writer: "மைக்கல் ஹெச். ஹார்ட்",
+        category: "கட்டுரைகள்",
+        original_price: 500,
+        offer_price: 450,
+        content: "",
+      },
+      {
+        code_no: "5",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "மஹ்ஜபீன்",
+        writer: "ஹஸன்",
+        category: "நாவல்",
+        original_price: 180,
+        offer_price: 168,
+        content: "",
+      },
+      {
+        code_no: "6",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "அபூபக்ர் ரலியல்லஹு அன்ஹு ஓர் இனிய வரலாறு",
+        writer: "இமாம் ஸுயூதி (ரஹ்)",
+        category: "வரலாறு",
+        original_price: 49,
+        offer_price: 36,
+        content: "",
+      },
+      {
+        code_no: "7",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "40 ஸலவாத்துகளும் சிறப்புகளும்",
+        writer: "",
+        category: "",
+        original_price: 25,
+        offer_price: 22,
+        content: "",
+      },
+      {
+        code_no: "8",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "மன்ஜில் (அற்புத நோய் நிவாரணி)",
+        writer: "",
+        category: "அவ்ராது",
+        original_price: 20,
+        offer_price: 18,
+        content: "",
+      },
+      {
+        code_no: "9",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "கஸஸுன் நபிய்யீன் பாகம் - 01",
+        writer: "அபுல் ஹஸன் நத்வீ (ரஹ்)",
+        category: "பாடநூல் (அரபி)",
+        original_price: 45,
+        offer_price: 40,
+        content: "",
+      },
+      {
+        code_no: "10",
+        img: "https://dummyimage.com/500/948f94/fff",
+        name: "தேன்துளிகள்",
+        writer: "அஃப்ஸல் ஹுஸைன்",
+        category: "சிறுவர் நூல்கள்",
+        original_price: 90,
+        offer_price: 85,
+        content: "",
+      },
+    ];
+  </script>
+  <script src="./assets/js/invoice.js"></script>
+</body>
+
 </html>
