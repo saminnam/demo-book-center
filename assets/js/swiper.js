@@ -26,7 +26,7 @@ function goToSlide(index) {
 
   interval = setTimeout(() => {
     goToSlide((current + 1) % indicators.length);
-  }, 3000);
+  }, 10000);
 }
 
 indicators.forEach((indicator, index) => {

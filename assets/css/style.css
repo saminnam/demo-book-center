@@ -130,7 +130,7 @@ body {
   border-radius: 4px;
   background: #e8b838;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.10s ease;
   position: relative;
   cursor: pointer;
 }
